@@ -148,6 +148,82 @@ myFunction();   // returns value
 */
 
 
+/*
+
+Memory are of two types 
+
+1) Stack (primitive)     : gives copied value
+2) Heap (non-primitive)  : gives reference value i.e, original value 
+
+*/
+
+// stack example 
+
+let myname = "abhinav"
+let anothername = myname
+anothername = "deadline"
+console.log(myname);
+console.log(anothername);
+
+// heap example 
+
+let userone = {
+    email : "abhi67@gmail.com",
+    upi : "abhi@sbi",
+}
+let usertwo = userone
+usertwo.email = "ap45@gyahoo.com"
+console.log(userone.email);
+console.log(usertwo.email);
+
+// to add strings using ` method 
+
+const name = "abhinav"
+const repocount = 50
+console.log(`hello my name is ${name} and my reposiorty count is ${repocount}`);
+
+// another method to declare strings
+
+const gamename = new String('clashofclans')
+
+// string methods 
+
+console.log(gamename[0]);
+console.log(gamename.__proto__);
+console.log(gamename.length);
+console.log(gamename.toUpperCase());
+console.log(gamename.charAt(4));
+console.log(gamename.indexOf('h'));
+
+const newstring = gamename.substring(0, 4)
+console.log(newstring);
+
+const anotherstring = gamename.slice(-11, 8)
+console.log(anotherstring);
+
+const newstringone = "   abhinav   "
+console.log(newstringone.trim());   // removes extra spaces 
+
+const url = "https://google.com/abhinav69patil"
+console.log(url.replace('69', '-'));
+console.log(url.includes('abhi'));
+
+const game = new String('clash-of-clans')
+console.log(game.split('-'));  // string to array 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
