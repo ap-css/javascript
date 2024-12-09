@@ -211,6 +211,91 @@ console.log(url.includes('abhi'));
 const game = new String('clash-of-clans')
 console.log(game.split('-'));  // string to array 
 
+const balance = new Number(100)
+console.log(balance);
+
+console.log(balance.toString());   // number to string
+console.log(balance.toFixed(2));   // provides precision
+
+const anothernumber = 123.968
+console.log(anothernumber.toPrecision(3));  // for exact precision of no
+
+const hundreds = 1000000
+console.log(hundreds.toLocaleString('en-IN'));  // used for representing big no in indian form
+
+console.log(Math);
+console.log(Math.abs(-4));     // -ve to +ve 
+console.log(Math.round(4.6));  // most used
+console.log(Math.ceil(4.6));
+console.log(Math.floor(4.6));
+console.log(Math.min(4 ,3, 6, 8));
+console.log(Math.max(4, 3, 6, 8));
+
+console.log(Math.random());  // generates random value bw 0 and 1
+console.log(Math.floor(Math.random() * 10) + 1);  // for better optimized result 
+
+const min = 10
+const max = 20
+console.log(Math.floor(Math.random() * (max-min-1)) + min); // standard formula 
+
+let mydate = new Date()
+console.log(mydate);   // confusing representation
+
+console.log(mydate.toString());
+console.log(mydate.toDateString());
+console.log(mydate.toLocaleString());
+console.log(typeof mydate);
+
+
+let mycreatedDate = new Date(2024, 0, 26, 8, 3)   // used when there is need to specify need
+console.log(mycreatedDate.toLocaleString());
+
+let mynewDate = new Date("06-14-2004")   // another format
+console.log(mynewDate.toLocaleString());
+
+let myTimeStamp = Date.now()
+console.log(myTimeStamp); 
+console.log(mycreatedDate.getTime());  // from specific date
+console.log(Math.floor(Date.now()/1000));  // in seconds 
+
+let newDate = new Date()
+console.log(newDate);
+console.log(newDate.getMonth() + 1);
+console.log(newDate.getDay());
+
+newDate.toLocaleString('default',{              // more customization toLocaleString
+    weekday: "long",  
+    hour: "numeric",
+    day: "2-digit"
+})
+console.log(newDate.toLocaleString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
