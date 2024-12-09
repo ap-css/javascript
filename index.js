@@ -32,3 +32,126 @@ object
 
 console.log(typeof undefined)
 console.log(typeof null)
+
+let score = "33abc"
+console.log(typeof score);
+
+// to convert string to number
+
+let valueInNumber = Number(score)
+console.log( typeof valueInNumber);
+console.log(valueInNumber);
+
+/*
+
+"33" : 33
+"33abc" : Nan
+true : 1 ; false :0
+
+*/
+
+let isLoggedIn = "user"
+let booleanisLoggedIn = Boolean(isLoggedIn)
+console.log(booleanisLoggedIn);
+
+/*
+
+1 : true ; 0 : false
+"" : false
+"filled" : true 
+
+*/
+
+let str1 = "hello"
+let str2 = " abhinav"
+let str3 = str1 + str2
+console.log(str3);
+
+console.log("1" + 2);
+console.log(1 + "2");
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2"); 
+//better way to represent is using paranthesis
+console.log((3 + 4) * 5 % 3);
+
+let x = 3;
+const y = x++;
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+// If used postfix, with operator after operand (x++), the increment operator increments and returns the value before incrementing.
+
+let a = 3;
+const b = ++a;
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+// If used prefix, with operator before operand ( ++x), the increment operator increments and returns the value after incrementing.
+
+
+
+console.log(null > 0);
+console.log(null == 0);
+console.log(null >= 0);
+
+/*
+
+the reason is that equality check (==) & comparisons ( > < >= <=) work differently
+comparisons convert null to zero that is why 3rd case is true and 1st case is false
+so avoid these codes
+
+*/
+
+console.log(undefined == 0);
+console.log(undefined > 0);
+console.log(undefined < 0);
+
+console.log("2" === 2); // strict comparison which also compares the data type not only values
+
+// PRIMITIVE DATA TYPES : string, number, Boolean, null, undefined, symbol, bigint
+// NON-PRIMITVE DATA TYPES ( REFERENCE) : array, objects, functions
+
+const id = Symbol("123")
+const anotherid = Symbol("123")
+console.log(id == anotherid);
+
+// in symbol values of variable might be same but the return value will be different 
+
+const students = ["aman", "amar", "anurag"]; // array
+console.log(students);
+
+let myObj = {
+    name : "abhinav", // object
+    age : 20,         // object
+}
+console.log(myObj);
+
+const myFunction = function(){        //function
+    console.log("hello abhinav");
+}
+myFunction();   // returns value
+
+/* Return value of datatypes using console.log(typeof ___);
+
+1)  Primitive Datatypes
+       Number => number
+       String  => string
+       Boolean  => boolean
+       null  => object
+       undefined  =>  undefined
+       Symbol  =>  symbol
+       BigInt  =>  bigint
+
+2)  Non-primitive Datatypes
+       Arrays  =>  object
+       Function  =>  function also known as object function 
+       Object  =>  object
+
+*/
+
+
+
+
+
+
+
+
+
