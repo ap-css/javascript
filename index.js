@@ -485,6 +485,62 @@ if(true){
     }
 console.log(c);
 
+// nested function 
+
+function one(){
+    const username = "abhinav"
+    function two(){
+        const website = "youtube"
+        console.log(username);            // child can access parent 
+        }
+        // console.log(website)           will not run beacuse its outside the scope
+        two()
+}
+one()
+
+// similiarly 
+
+if(true){
+    const username = "abhinav"
+    if(username === "abhinav"){
+        const website = " youtube"
+        console.log(username+website);
+        }
+        // console.log(website)           will not run
+}
+        // console.log(username)          also will not run 
+
+// hoisting in js
+
+console.log(addone(5));
+function addone(num){
+    return num + 1
+}
+
+/* it will not work because the function is accessed before its declaration 
+
+addtwo(5)
+const addtwo = function(num){
+    return num + 2
+} 
+
+*/
+
+
+// arrow function
+
+const addtwo = (num1, num2) => {
+    return num1 + num2
+}
+console.log(addtwo(3,4));
+
+
+// implicit return 
+
+const addno = (num1,num2 ) => ( num1 + num2)
+console.log(addno(3,4));
+
+
 
 
 
