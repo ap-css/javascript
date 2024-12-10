@@ -327,6 +327,107 @@ let score3 = 300
 console.log(Array.of(score1, score2, score3));
 
 
+// objects % symbols
+
+const mySym = Symbol("key1")
+
+const Juser = {
+    name : "abhinav",
+    "full name" : "abhinav patil",
+    [mySym] : "mykey1",                // declare symbol inside an object
+    age : 20,
+    location : "bglr",
+    lastlogin : ["monday","thursday"]
+}
+
+// methods to print objects
+
+console.log(Juser.name);
+console.log(Juser["name"]);        
+console.log(Juser["full name"]);
+console.log(Juser[mySym]);
+
+Juser.name = "deadline"   // changes the value
+// Object.freeze(Juser)      // no update can be done
+Juser.name = "dork"
+console.log(Juser);
+
+// how to use objects inside function
+
+Juser.greeting = function(){
+    console.log(`Hello user, ${this.name}`);    // this operator can access the object methods
+    }
+    console.log(Juser.greeting());
+    
+// singleton object 
+
+const tinderuser = new Object()
+tinderuser.id  = "sam123"
+tinderuser.name = "sammmy"
+tinderuser.isloggedout = false
+console.log(tinderuser);
+
+// nested objects 
+
+const regularuser = {
+    email : "dork56@gmail.com",
+    fullname : {
+        userfullname : {
+            firstname : "dead",
+            lastname : "dork"
+        }
+    }
+}
+console.log(regularuser.fullname.userfullname.lastname);
+
+
+// to combine objects 
+
+const obj1 = { 1:"a", 2:"b"}
+const obj2 = { 3:"a", 4:"b"}
+const obj3 = { 5:"a", 6:"b"}
+const obj4 = {...obj1, ...obj2, ...obj3}
+console.log(obj4);
+
+// many objects in an array 
+
+const users = [
+    {
+        id : 1,
+        gmail : "nks@gmail.com"
+    },
+    {
+        id : 1,
+        gmail : "nks@gmail.com"
+    },
+    {
+        id : 1,
+        gmail : "nks@gmail.com"
+    },
+]
+console.log(users[1].gmail);
+
+// to find key and value pair 
+
+console.log(Object.keys(tinderuser));
+console.log(Object.values(tinderuser));
+console.log(Object.hasOwnProperty('isLoggedIn'));
+
+// object destructuring 
+
+const course = {
+    coursename : "javascript",
+    price : 999,
+    teachername : "hitesh"
+}
+
+const {teachername: guru} = course    // instead of using console.log(course.teachername)
+console.log(guru);
+
+
+
+
+
 
 
 
