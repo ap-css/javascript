@@ -540,6 +540,28 @@ console.log(addtwo(3,4));
 const addno = (num1,num2 ) => ( num1 + num2)
 console.log(addno(3,4));
 
+// immediately invoked function expressions (IIFE) used to remove pollution due to global scope variables
+
+// name IIFE
+
+(function chai(){
+    console.log(`MASALA TEA`);
+})();                               // semi-colon is used to end statement explicitly to get correct op for second fn
+
+// unamed IIFE
+
+( () => {
+    console.log(`ILAICHI TEA`);
+})();
+
+// IIFE with values 
+
+( (name) => {
+    console.log(`ILAICHI TEA IS MADE IN ${name}`);
+})('india')
+
+
+
 
 
 
