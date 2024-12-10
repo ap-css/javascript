@@ -270,6 +270,78 @@ newDate.toLocaleString('default',{              // more customization toLocaleSt
 })
 console.log(newDate.toLocaleString());
 
+const myArr = [1,4,7,9]
+const myArrr = new Array(1,2,4,6)  // declaration of array 2nd type
+console.log(myArr);
+console.log(myArrr);
+
+// array methods 
+
+myArr.push(8)   // insert element into the last
+myArr.push(5)
+console.log(myArr);
+myArr.pop()     // removes last element 
+console.log(myArr);
+myArr.unshift(2)
+console.log(myArr);  // insert element in first
+myArr.shift()
+console.log(myArr);  // removes first element
+
+console.log(myArr.includes(3));
+console.log(myArr.indexOf(10));
+
+const newArr = myArr.join()  // converts array to string 
+console.log(newArr);
+
+// slice and splice : main diff is that in splice the original array gets manipulated 
+
+console.log("A:", myArr);
+const myn1 = myArr.slice(1,3)
+console.log(myn1);
+console.log("B:",myArr);
+
+const myn2 = myArr.splice(1,3)
+console.log(myn2);
+console.log("C:",myArr);
+
+const marvel = ["thor", "spidy", "iron"]
+const dc = ["super", "flash", "bat"]
+const all = marvel.concat(dc)             // use this instead of push opn
+console.log(all);
+
+const allheroes = [...marvel,...dc]      // spread opn better then concat
+console.log(allheroes);
+
+const anotherarr = [1,2,[3,4,5],7,[6,8,9],10]
+const usablearr = anotherarr.flat(Infinity)     // used when there are nested arrays 
+console.log(usablearr);
+
+console.log(Array.isArray("abhinav"));
+console.log(Array.from("abhinav"));      // converts any type to array
+
+console.log(Array.from({name: "abhinav"}));  // cannot convert directly
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+console.log(Array.of(score1, score2, score3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
