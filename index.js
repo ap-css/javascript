@@ -424,8 +424,66 @@ const course = {
 const {teachername: guru} = course    // instead of using console.log(course.teachername)
 console.log(guru);
 
+// functions 
+
+function addTwoNumbers(number1, number2){
+    return number1 + number2
+}
+const result = addTwoNumbers(3,5)
+console.log("result:", result);
+
+function loginUserMessage(username){
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("abhinav"));  // if there is no argument passed then it will print undefined
 
 
+// rest operator (...)
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200,450,760,900));
+
+// how to pass object in function 
+
+function handleobject(anyobject){
+    console.log(`username is ${anyobject.username} and its price is ${anyobject.price}`);
+    }
+    handleobject({
+        username: "santosh",
+        price: 400
+    })
+
+
+// another method 
+
+const user = {
+    username: "santosh",
+    price: 400
+}
+function handleobject(anyobject){
+    console.log(`username is ${anyobject.username} and its price is ${anyobject.price}`);
+    }
+    handleobject(user)
+
+
+// how to pass array in function
+
+const mynewArray = [200,400,600,800]
+function returnSecondValue(getarray){
+    return getarray[1]
+}
+console.log(returnSecondValue(mynewArray));
+
+// scope in function i.e., {}
+
+let c = 300                              // global scope
+if(true){
+    let c = 10                           // block scope 
+    const d = 20
+    console.log("INNER:", c);
+    }
+console.log(c);
 
 
 
