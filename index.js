@@ -560,12 +560,109 @@ console.log(addno(3,4));
     console.log(`ILAICHI TEA IS MADE IN ${name}`);
 })('india')
 
+// if 
+
+const temperature = 41
+if(temperature === 40){                  // if will be executed only when it is true
+    console.log("less than 50");
+    }
+    else{
+        console.log("greater than 50");
+         }
+
+const scoore = 200
+if(scoore > 100){
+    const power = "fly"
+    console.log(`user power: ${power}`);
+    }
+    // console.log(`user power: ${power}`);  will not be executed since it is outside the scope of if condn
+
+
+// AND (&&) OR(||) operators
+
+const adminloggedin = true
+const creditcard = true 
+const loggedinfromgoogle = false
+const loggedinfromemail = true 
+
+if(adminloggedin && creditcard){
+    console.log("welcome admin");
+}
+
+if(loggedinfromgoogle || loggedinfromemail){
+    console.log("logged in");
+    }
+
+// switch 
+
+const month = 3
+switch (month) {
+    case 1:
+        console.log("Jan");
+        break;
+    case 2:
+        console.log("feb");
+        break;
+    case 3:
+        console.log("march");
+        break;
+    case 4:
+        console.log("april");
+        break;
+
+    default: console.log("default");
+       break;
+}
 
 
 
+// falsy values : false, 0, -0, BigInt 0n, "", null, undefined, NaN
+// truthy values : "0", "false", " ", [], {}, function(){} w/o any parameter & arguments
 
+// to check array 
 
+const useremail = []
+if(useremail.length === 0){
+    console.log("array is empty");
+    }
 
+// to check object 
+
+const emptyobj = {}
+if(Object.keys(emptyobj).length === 0){
+    console.log("object is empty");
+    }
+
+// nullish coalescing operator (??)  : type of callback used when there are errors
+
+let val1;
+val1 = 5 ?? 10
+console.log(val1);
+
+// val1 = null ?? 10       o/p = 10
+// val1 = undefined ?? 15  o/p = 15
+
+// Terniary Operator
+// syntax : condition ? true : false
+
+const iceteaprice = 100
+iceteaprice <= 80 ? console.log("less than 80") : console.log("more than 80");
+
+// for 
+
+for (let index = 0; index < 3; index++) {
+    const element = index;
+    console.log(element);
+    }
+
+// nested for loop
+
+for (let i = 0; i <= 3; i++) {
+    console.log(`outer loop value: ${i}`);
+    for (let j = 0; j <= 3; j++) {
+    console.log(`inner loop value ${j} and inner loop ${i}`);
+    }
+    
 
 
 
