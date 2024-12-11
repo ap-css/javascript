@@ -663,9 +663,52 @@ for (let i = 0; i <= 3; i++) {
     console.log(`inner loop value ${j} and inner loop ${i}`);
     }
     
+// break
+
+for (let index = 1; index <= 10; index++) {
+    if(index == 5){
+        console.log(`detected 5`);
+        break
+    }
+    console.log(`value of i is ${index}`);
+    } 
+    
+
+// continue
+
+for (let index = 1; index <= 10; index++) {
+    if(index == 5){
+        console.log(`detected 5`);
+        continue
+    }
+    console.log(`value of i is ${index}`);
+    }
+
+// while 
+
+let index = 0
+while(index <=10){
+    console.log(`value of index is ${index}`);
+    index = index + 2
+    }
+
+// array using while loop 
+
+let student = ["harsh", "anil", "suraj"]
+let arrr = 0
+while (arrr< student.length) {
+    console.log(`student name is ${student[arrr]}`);
+    arrr = arrr + 1
+}
 
 
+// do while
 
+let marks = 1
+do{
+    console.log(`marks scored is ${marks}`);
+    marks++
+} while(marks<=5)
 
 
 
@@ -721,4 +764,4 @@ for (let i = 0; i <= 3; i++) {
 
 
 
-
+}
